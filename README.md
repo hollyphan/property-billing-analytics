@@ -36,7 +36,11 @@ mysql --local-infile=1 -u root -p property_billing_analytics < sql/00_load_data.
 
 ## Analysis files
 
-- `sql/01_data_cleaning.sql`
+See [`FINDINGS.md`](FINDINGS.md) for the write-up behind each completed
+file -- business question, what the data shows, and recommendations.
+
+- `sql/01_data_cleaning.sql` -- structural and referential integrity
+  checks (NULLs, invalid ranges, date logic, orphaned foreign keys)
 - `sql/02_billing_exceptions.sql`
 - `sql/03_payment_delinquency.sql`
 - `sql/04_portfolio_variance_trend.sql`
